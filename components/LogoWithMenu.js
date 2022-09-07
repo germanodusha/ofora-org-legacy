@@ -31,7 +31,6 @@ class LogoWithMenu extends React.Component {
           <Logo {...logoProps} onClick={this.handleLogoClick} />
           {!menuVisible && <span style={textStyle}>{slogan}</span>}
         </div>
-        <Menu visible={menuVisible} onBgClick={this.toggleMenu} />
         {/* <ResearchBanner /> */}
         <style jsx>{`
           .root {
