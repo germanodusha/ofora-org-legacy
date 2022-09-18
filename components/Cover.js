@@ -16,8 +16,8 @@ export default class PhotosAndVideosCover extends React.Component {
     return (
       <ContentWrapper style={coverWrapperStyle}>
         <Title>
-          <MenuLink href={{ pathname: '/acoes' }}>/Ações & imaginações</MenuLink>{' '}
-          <MenuLink href={{ pathname: '/acoes', query: {initialCategory: categoryName} }}>{`/${categoryName}`}</MenuLink>
+          <MenuLink href={{ pathname: '/' }}>/Ações & imaginações</MenuLink>{' '}
+          <MenuLink href={{ pathname: '/', query: {initialCategory: categoryName} }}>{`/${categoryName}`}</MenuLink>
         </Title>
         <div style={coverMidStyle}>
           <h1 style={h1Style}>{ doc.data.title[0].text }</h1>

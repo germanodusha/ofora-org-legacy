@@ -20,9 +20,11 @@ const MenuLang = () =>
         </MenuLink>
         <style jsx>{`
           .menu-lang {
-            position: relative;
+            position: absolute;
             font-weight: 600;
             font-size: 29px;
+            top: 15px;
+            right: 30px;
           }
           @media only screen and (min-width: 752px) {
             .menu-lang {

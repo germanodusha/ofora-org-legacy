@@ -1,9 +1,7 @@
 import React from 'react'
 import Router from 'next/router'
-import Menu from './Menu'
 import Logo from './Logo'
 import { withRouter } from 'next/router'
-import ResearchBanner from './ResearchBanner'
 
 class LogoWithMenu extends React.Component {
   constructor (props) {
@@ -56,8 +54,7 @@ class LogoWithMenu extends React.Component {
   }
 
   handleLogoClick = (e) => {
-    if (this.state.menuVisible && Router.pathname !== '/') return Router.push('/')
-    this.toggleMenu()
+    window.location = 'https://ofora.org'
   }
   toggleMenu = () => this.setState({ menuVisible: !this.state.menuVisible })
 }

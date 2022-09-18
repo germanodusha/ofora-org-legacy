@@ -50,9 +50,6 @@ export default class Index extends React.Component {
           </ContentWrapper>
         </div>
         <RelatedContentWrapper related={related} />
-        <ContentWrapper style={{background: '#dfdfdf'}}>
-          <SiteMap />
-        </ContentWrapper>
         <iframe id="download" style={{ display: 'none' }}></iframe>
         <style jsx>{`
           .teaser {
