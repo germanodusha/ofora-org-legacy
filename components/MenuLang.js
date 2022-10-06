@@ -1,9 +1,13 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 import { Consumer } from './base/Context'
 import MenuLink from './MenuLink'
 
-const MenuLang = () =>
-  <Consumer>
+const MenuLang = () => {
+  const router = useRouter()
+  const isProject = router.pathname.includes('acoes/')
+
+  return <Consumer>
     {context => {
       return <div className='menu-lang'>
         <MenuLink
@@ -26,6 +30,7 @@ const MenuLang = () =>
             top: 15px;
             right: 30px;
             font-family: 'Source Serif Pro', serif;
+            color: ${isProject ? 'white' : 'black'};
           }
           @media only screen and (min-width: 752px) {
             .menu-lang {
@@ -36,5 +41,6 @@ const MenuLang = () =>
       </div>
     }}
   </Consumer>
+}
 
 export default MenuLang
