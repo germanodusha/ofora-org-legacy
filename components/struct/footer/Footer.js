@@ -7,12 +7,12 @@ import { Consumer } from '../../base/Context'
 
 const locale = {
   br: {
-    contactText: "Antes de dar o Fora, se quiser tirar dúvidas, dar sugestões ou colaborar, escreva para:",
+    contactText: "Programa multidisciplinar interessado em discutir as possibilidades de viver a cidade e experimentar o espaço público no século XXI, publicado entre os anos de 2018 e 2020.",
     ccText: "Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos.",
     ccCode: "(CC BY-NC-SA 4.0)"
   },
   en: {
-    contactText: "Before you go, if you have any doubts, suggestions or collaboration ideas, write to:",
+    contactText: "Multidisciplinary program interested in discussing the possibilities of living in the cities and experiencing public spaces in the 21st century, published between 2018 and 2020.",
     ccText: "All the content produced by Fora can be copied, redistributed and transformed for non-commercial ends, as long as credits are given and that licencing of new creations be under these same terms. (CC BY-NC-SA 4.0)",
     ccCode: "(CC BY-NC-SA 4.0)"
   }
@@ -32,7 +32,6 @@ export default class Footer extends React.Component {
             <P>
               <div className='contactText'>
                 <div>{contactText}</div>
-                <div><MenuLink href={{ pathname: '/o-que-e' }}>info@ofora.org</MenuLink></div>
               </div>
             </P>
           </div>
