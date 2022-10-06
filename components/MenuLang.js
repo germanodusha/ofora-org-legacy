@@ -25,6 +25,7 @@ const MenuLang = () =>
             font-size: 29px;
             top: 15px;
             right: 30px;
+            font-family: 'Source Serif Pro', serif;
           }
           @media only screen and (min-width: 752px) {
             .menu-lang {
