@@ -1,11 +1,11 @@
-import React from 'react'
-import ImageGrid from './ImageGrid'
-import ContentWrapper from './struct/ContentWrapper'
+import React from "react";
+import ImageGrid from "./ImageGrid";
+import ContentWrapper from "./struct/ContentWrapper";
 
-export const RelatedContentWrapper = ({ related }) => (
-  related.length > 0 &&
-    <ContentWrapper style={{background: '#cfcfcf'}}>
-      <span className='title'>/Publicações relacionadas</span>
+export const RelatedContentWrapper = ({ related }) =>
+  related.length > 0 && (
+    <ContentWrapper style={{ background: "#cfcfcf" }}>
+      <span className="title">/Publicações relacionadas</span>
       <ImageGrid items={related} />
       <style jsx>{`
         .title {
@@ -19,6 +19,6 @@ export const RelatedContentWrapper = ({ related }) => (
         }
       `}</style>
     </ContentWrapper>
-)
+  );
 
-export default RelatedContentWrapper
+export default RelatedContentWrapper;

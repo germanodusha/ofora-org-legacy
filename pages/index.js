@@ -5,7 +5,6 @@ import ContentWrapper from '../components/struct/ContentWrapper'
 import Title from '../components/Title'
 import CategorySelector from '../components/CategorySelector'
 import ImageGrid from '../components/ImageGrid'
-import Link from '../components/MenuLink'
 import { Consumer } from '../components/base/Context'
 
 export default class pageAcoes extends React.Component {

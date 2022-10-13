@@ -15,6 +15,7 @@ import ImageGalery from '../../components/base/ImageGalery'
 import Video from '../../components/base/Video'
 import { RichText } from 'prismic-reactjs'
 
+
 export default class Index extends React.Component {
   static async getInitialProps ({ query }) {
     const api = await Prismic.api('https://fora.prismic.io/api/v2')

@@ -1,31 +1,31 @@
-import React from 'react'
-import Router from 'next/router'
-import Logo from './Logo'
-import { withRouter } from 'next/router'
+import React from "react";
+import Router from "next/router";
+import Logo from "./Logo";
+import { withRouter } from "next/router";
 
 class LogoWithMenu extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
-      menuVisible: props.startVisible || false
-    }
+      menuVisible: props.startVisible || false,
+    };
   }
 
-  componentWillReceiveProps (nextProps) {
-    this.setState({ menuVisible: false })
+  componentWillReceiveProps(nextProps) {
+    this.setState({ menuVisible: false });
   }
 
-  render () {
-    const { menuVisible } = this.state
-    const { slogan, animation, invert } = this.props
+  render() {
+    const { menuVisible } = this.state;
+    const { slogan, animation, invert } = this.props;
     const logoProps = {
-      animation: menuVisible ? false : animation ? animation : 'fade',
-      invert: menuVisible ? false : invert
-    }
+      animation: menuVisible ? false : animation ? animation : "fade",
+      invert: menuVisible ? false : invert,
+    };
     return (
       <div>
-        <div className='root'>
+        <div className="root">
           <Logo {...logoProps} onClick={this.handleLogoClick} />
           {!menuVisible && <span style={textStyle}>{slogan}</span>}
         </div>
@@ -50,19 +50,19 @@ class LogoWithMenu extends React.Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 
   handleLogoClick = (e) => {
-    window.location = 'https://ofora.org'
-  }
-  toggleMenu = () => this.setState({ menuVisible: !this.state.menuVisible })
+    window.location = "https://ofora.org";
+  };
+  toggleMenu = () => this.setState({ menuVisible: !this.state.menuVisible });
 }
 
 const textStyle = {
   fontFamily: "'Source Serif Pro', serif",
   fontWeight: 600,
-  padding: 10
-}
+  padding: 10,
+};
 
-export default withRouter(LogoWithMenu)
+export default withRouter(LogoWithMenu);

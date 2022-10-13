@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export default class Title extends React.Component {
-  render () {
+  render() {
     return (
       <div>
         {this.props.children}
         <style jsx>{`
           div {
-            font-family: 'Source Serif Pro', serif;
+            font-family: "Source Serif Pro", serif;
             font-weight: 600;
             font-size: 29px;
             margin: 36px 0 0px 0px;
@@ -20,6 +20,6 @@ export default class Title extends React.Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 }
