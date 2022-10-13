@@ -13,8 +13,8 @@ export default class PhotosAndVideosCover extends React.Component {
     const authorName = author.data && author.data.name[0].text;
     const categoryName =
       lang === "br"
-        ? category.data?.name[0].text
-        : category.data?.name_en[0].text;
+        ? category.data.name[0].text
+        : category.data.name_en[0].text;
 
     return (
       <Consumer>
