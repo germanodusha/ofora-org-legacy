@@ -11,15 +11,15 @@ export default class PhotosAndVideosCover extends React.Component {
     const doc = this.props.doc;
     const { author, photos, category, videos, date } = doc.data;
     const authorName = author.data && author.data.name[0].text;
-    const categoryName =
-      lang === "br"
-        ? category.data.name[0].text
-        : category.data.name_en[0].text;
+    const categoryItem = this.props.categories.find(i => i.data.name[0].text === category.data.name[0].text)
 
     return (
       <Consumer>
         {(context) => {
           const lang = context ? context.lang : "br";
+          const categoryName = lang === "br"
+            ? categoryItem.data.name[0].text
+            : categoryItem.data.name_en[0].text;
           return (
             <ContentWrapper style={coverWrapperStyle}>
               <Title>

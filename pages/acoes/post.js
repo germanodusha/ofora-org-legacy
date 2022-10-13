@@ -8,7 +8,7 @@ import AuthorTeaser from '../../components/AuthorTeaser'
 import Sidebars from '../../components/Sidebars'
 import P from '../../components/base/Paragraph'
 import RelatedContentWrapper from '../../components/RelatedContentWrapper'
-import SiteMap from '../../components/SiteMap'
+import { getAcoes } from '../../lib/backend'
 import Quote from '../../components/base/Quote'
 import NotedParagraph from '../../components/base/NotedParagraph'
 import ImageGalery from '../../components/base/ImageGalery'
@@ -21,7 +21,8 @@ export default class Index extends React.Component {
     const api = await Prismic.api('https://fora.prismic.io/api/v2')
     const doc = await api.getByUID('post', query.id, { fetchLinks: ['author.name', 'author.bio', 'author.photo', 'category.name', 'category.description'] })
     const related = await api.getByIDs(doc.data.related.map(item => item.related_item.id), { fetchLinks: ['author.name', 'category.name'] })
-    return { doc, related: related.results }
+    const { categories } = await getAcoes()
+    return { doc, related: related.results, categories }
   }
 
   render () {
