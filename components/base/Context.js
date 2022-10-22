@@ -10,12 +10,31 @@ class Provider extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
+    if (typeof window !== 'undefined') {
+      const lang = window.localStorage.getItem("lang")
+      if (lang) {
+        this.state = { lang }
+      }
+    }
   }
 
+
+  setLangBr = () => {
+    this.setState({ lang: "br" });
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem("lang", "br")
+    }
+  };
+  setLangEn = () => {
+    this.setState({ lang: "en" });
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem("lang", "en")
+    }
+  };
+
+
   toggleLang = () =>
-    this.setState({ lang: this.state.lang === "br" ? "en" : "br" });
-  setLangBr = () => this.setState({ lang: "br" });
-  setLangEn = () => this.setState({ lang: "en" });
+    this.state.lang === "br" ? this.setLangEn() : this.setLangBr()
 
   render() {
     return (
