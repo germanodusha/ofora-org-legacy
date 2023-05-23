@@ -60,7 +60,7 @@ class LogoWithMenu extends React.Component {
     if (Router.pathname !== '/') {
       return Router.push('/')
     } else {
-      return Router.push('https://ofora.org/')
+      return window.location.replace("http://ofora.org/")
     }
   }
   toggleMenu = () => this.setState({ menuVisible: !this.state.menuVisible })
